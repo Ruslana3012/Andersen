@@ -1,26 +1,33 @@
 package org.example.service;
 
+import org.example.annotation.AnnotationHandler;
+import org.example.model.user.Admin;
+import org.example.model.user.Client;
 import org.example.model.Ticket;
 
-import java.math.BigDecimal;
 import java.time.Instant;
 
 public class TicketService {
 
     public static void main(String[] args) {
-        Ticket emptyTicket = new Ticket();
-        System.out.println(emptyTicket);
-
-        Ticket fullTicket = new Ticket("1234", "Hall 1", "123", Instant.now().getEpochSecond(), true, "A", 154.34, new BigDecimal("43.9"));
-        System.out.println(fullTicket);
-
-        Ticket fullTicketWithAutomaticallyTime = new Ticket("2", "Hall 2", "002", false, "B", 154.35, new BigDecimal("222"));
-        System.out.println(fullTicketWithAutomaticallyTime);
-
         Ticket limitedTicket = new Ticket("Hall 2", "324", Instant.now().getEpochSecond());
-        System.out.println(limitedTicket);
 
-        Ticket limitedTicketWithAutomaticallyTime = new Ticket("Hall 3", "364");
-        System.out.println(limitedTicketWithAutomaticallyTime);
+        AnnotationHandler.handleNullableWarnings(new Ticket());
+
+        limitedTicket.share("+123456789");
+        limitedTicket.share("+123456789", "email@gmail.com");
+
+        Client client = new Client();
+        Admin admin = new Admin();
+
+        client.printRole();
+        admin.printRole();
+
+
+        System.out.println("\nThe default implementation: ");
+        client.print();
+
+        System.out.println("\nOverride implementation: ");
+        admin.print();
     }
 }
