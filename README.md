@@ -1,3 +1,5 @@
-![image](https://github.com/Ruslana3012/Andersen/assets/105870200/e7f496d3-8668-4f06-9eb0-0e7ab92556f2)
-![image](https://github.com/Ruslana3012/Andersen/assets/105870200/9af0c03b-bf7f-4515-955b-84bdb005deb4)
+![image](https://github.com/Ruslana3012/Andersen/assets/105870200/73cddfd4-0871-4deb-8866-1f12da4875d9)
+![image](https://github.com/Ruslana3012/Andersen/assets/105870200/bb3360e5-6238-4faa-ba9b-4387c3b55bbd)
+
+
 
